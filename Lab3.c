@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string.h>
 
+#encoding word
 void coder(char s[], int k)
 {
 	int l = strlen(s), m = 0;
