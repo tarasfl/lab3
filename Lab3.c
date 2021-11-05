@@ -34,7 +34,7 @@ int main()
 {
 	char str[] = "absdeu";
 	int key = 3;
-	coder(str, key);
+	encoder(str, key);
     int h = 5;
     int *j = &h;
 	return 0;
