@@ -2,31 +2,31 @@
 #include <math.h>
 #include <string.h>
 
-void coder(char s[], int k)
+void encoder(char word[], int key)
 {
-	int l = strlen(s), m = 0;
-	char ch[l], res[l];
-	for (int i = 0; i < l; i++)
+	int wordLenth = strlen(word), numOfEncodedChars = 0;
+	char changer[wordLenth], result[wordLenth];
+	for (int i = 0; i < wordLenth; i++)
 	{
-		ch[i] = '0';
+		changer[i] = '0';
 	};
 	int i = 0, j = 0;
-	while (m < l)
+	while (numOfEncodedChars < wordLenth)
 	{
-		if (ch[i] == '0')
+		if (changer[i] == '0')
 		{
 			j++;
 		}
-		if (j != 0 && j % k == 0)
+		if (j != 0 && j % key == 0)
 		{
-			ch[i] = '1';
-			res[m] = s[i];
-			printf("%c", s[i]);
-			m++;
+			changer[i] = '1';
+			result[numOfEncodedChars] = word[i];
+			printf("%c", word[i]);
+			numOfEncodedChars++;
 			j = 0;
 		}
 		i++;
-		if (i>=l)
+		if (i>=wordLenth)
 			i = 0;
 	}
 };
